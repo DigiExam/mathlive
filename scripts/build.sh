@@ -83,10 +83,10 @@ if [ "$BUILD" = "production" ]; then
 fi
 
 # Bundle Typescript declaration files (.d.ts).
-# Even though we only generate declaration files, the target must be set 
+# Even though we only generate declaration files, the target must be set
 # high-enough to prevent `tsc` from complaining (!)
 printf "${DOT} Building declaration files (.d.ts)"
-npx tsc --target "es2020" -d --moduleResolution "node" --emitDeclarationOnly --outDir ./declarations ./src/public/mathlive.ts 
+npx tsc --skipLibCheck --target "es2020" -d --moduleResolution "node" --emitDeclarationOnly --outDir ./declarations ./src/public/mathlive.ts
 mv ./declarations/public ./dist
 rm -rf ./declarations
 echo -e "${LINECLEAR}${CHECK} Declaration files built"
@@ -95,7 +95,7 @@ echo -e "${LINECLEAR}${CHECK} Declaration files built"
 
 # Do build (development or production)
 printf "${DOT} Making a ${EMPH}${BUILD}${RESET} build"
-npx rollup --silent --config 
+npx rollup --silent --config
 echo -e "${LINECLEAR}${CHECK} ${EMPH}${BUILD}${RESET} build done"
 
 if [ "$BUILD" = "production" ]; then
