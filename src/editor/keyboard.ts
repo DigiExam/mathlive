@@ -130,7 +130,6 @@ export function mightProducePrintableCharacter(evt: KeyboardEvent): boolean {
  *
  */
 function keyboardEventToString(evt: KeyboardEvent): string {
-  console.log("tja")
   evt = normalizeKeyboardEvent(evt);
 
   const modifiers: string[] = [];
