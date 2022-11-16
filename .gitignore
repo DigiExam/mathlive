@@ -4,6 +4,7 @@
 /out
 /node_modules
 /coverage
+/dist
 /declarations
 .rollup.cache/
 
