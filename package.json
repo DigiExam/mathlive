@@ -21,8 +21,7 @@
     "start": "bash ./scripts/start.sh",
     "test": "bash ./scripts/test.sh",
     "version": "bash ./scripts/version.sh",
-    "postversion": "bash ./scripts/github-release.sh",
-    "postinstall": "tsc --outDir ./build"
+    "postversion": "bash ./scripts/github-release.sh"
   },
   "main": "./dist/mathlive.min.js",
   "module": "./dist/mathlive.min.mjs",
