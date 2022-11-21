@@ -86,7 +86,7 @@ fi
 # Even though we only generate declaration files, the target must be set
 # high-enough to prevent `tsc` from complaining (!)
 printf "${DOT} Building declaration files (.d.ts)"
-npx tsc --skipLibCheck --target "es2020" -d --moduleResolution "node" --outDir ./declarations ./src/public/mathlive.ts
+npx tsc --skipLibCheck --target "es2020" -d --moduleResolution "node" --emitDeclarationOnly --outDir ./declarations ./src/public/mathlive.ts
 mv ./declarations/public ./dist
 rm -rf ./declarations
 echo -e "${LINECLEAR}${CHECK} Declaration files built"
