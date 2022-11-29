@@ -11,6 +11,7 @@
 babel.babel
 TODO.md
 examples/basic/index.debug.html
+*.tgz
 
 # To store secret credentials
 *.secret.js

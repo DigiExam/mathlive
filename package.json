@@ -1,6 +1,6 @@
 {
-  "name": "mathlive",
-  "version": "0.70.0",
+  "name": "@digiexam/mathlive",
+  "version": "0.70.1",
   "description": "Render and edit beautifully typeset math",
   "license": "MIT",
   "funding": {
@@ -9,9 +9,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/arnog/mathlive.git"
+    "url": "git+https://github.com/DigiExam/mathlive.git"
   },
-  "bugs": "https://github.com/arnog/mathlive/issues/",
+  "bugs": {
+    "url": "https://github.com/DigiExam/mathlive/issues/"
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com"
+  },
   "scripts": {
     "build": "bash ./scripts/build.sh",
     "clean": "bash ./scripts/clean.sh",
@@ -125,5 +130,10 @@
     "mathjax",
     "katex",
     "mathquill"
-  ]
+  ],
+  "homepage": "https://github.com/DigiExam/mathlive#readme",
+  "directories": {
+    "example": "examples",
+    "test": "test"
+  }
 }
